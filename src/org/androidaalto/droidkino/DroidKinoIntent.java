@@ -14,6 +14,7 @@ public class DroidKinoIntent {
      * Extra key name for the movies that the {@link DataFetchService} returns
      */
     public static String MOVIE_LIST_EXTRA = "movies";
+    public static String AREA_LIST_EXTRA = "areas";
 
     /***
      * Intent fired by {@link DataFetchService} when there is an error during

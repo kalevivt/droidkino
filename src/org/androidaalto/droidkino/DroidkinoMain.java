@@ -38,6 +38,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class DroidkinoMain extends Activity {
@@ -47,6 +48,10 @@ public class DroidkinoMain extends Activity {
     private final static int ENABLE_BUTTON_MESSAGE = 0;
 
     private List<MovieInfo> moviesList;
+    private List<AreaInfo> areasList;
+    
+    private Spinner areas;
+    private Spinner movies;
 
     private Button button;
 
@@ -81,8 +86,12 @@ public class DroidkinoMain extends Activity {
             } else {
                 moviesList = (List<MovieInfo>) intent
                         .getSerializableExtra(DroidKinoIntent.MOVIE_LIST_EXTRA);
+                areasList = (List<AreaInfo>) intent
+                    .getSerializableExtra(DroidKinoIntent.AREA_LIST_EXTRA);
                 DroidKinoApplication app = (DroidKinoApplication) getApplication();
                 app.setMovies(moviesList);
+                app.setAreas(areasList);
+                
                 // We use an Handler for the sure that the action is done in the
                 // UI thread
                 Message m = mHandler.obtainMessage(ENABLE_BUTTON_MESSAGE);
@@ -106,6 +115,8 @@ public class DroidkinoMain extends Activity {
         setContentView(R.layout.main);
 
         button = (Button) findViewById(R.id.search);
+        areas = (Spinner) findViewById(R.id.areasSpinner);
+        
         button.setOnClickListener(new OnClickListener() {
 
             @Override

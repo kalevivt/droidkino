@@ -32,7 +32,7 @@
 				android:layout_width="wrap_content" android:layout_height="wrap_content"
 				android:textSize="24sp"></TextView>
 			<Spinner android:layout_width="wrap_content"
-				android:layout_height="wrap_content"></Spinner>
+				android:layout_height="wrap_content" android:id="@+id/areasSpinner"></Spinner>
 		</TableRow>
 		<TableRow android:id="@+id/table_time" android:layout_width="wrap_content"
 			android:layout_height="wrap_content">
@@ -56,7 +56,7 @@
 				android:layout_width="wrap_content" android:layout_height="wrap_content"
 				android:textSize="24sp"></TextView>
 			<Spinner android:layout_width="wrap_content"
-				android:layout_height="wrap_content"></Spinner>
+				android:layout_height="wrap_content" android:id="@+id/moviesSpinner"></Spinner>
 		</TableRow>
 
 		<TableRow>

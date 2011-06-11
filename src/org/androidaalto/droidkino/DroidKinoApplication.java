@@ -17,6 +17,15 @@ import android.app.Application;
 public class DroidKinoApplication extends Application {
 
     private List<MovieInfo> movies = new ArrayList<MovieInfo>();
+    private List<AreaInfo> areas = new ArrayList<AreaInfo>();
+
+    public List<AreaInfo> getAreas() {
+        return areas;
+    }
+
+    public void setAreas(List<AreaInfo> areas) {
+        this.areas = areas;
+    }
 
     /***
      * Save the list of the movies
